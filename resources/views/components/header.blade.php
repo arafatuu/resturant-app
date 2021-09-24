@@ -16,9 +16,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/add">Add</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Search</a>
-        </li>
+       
         @if(Session::get('user'))
         <li class="nav-item">
           <a class="nav-link" href="#" >Welcome {{Session::get('user')}}</a>          

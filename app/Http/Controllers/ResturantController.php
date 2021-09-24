@@ -94,7 +94,13 @@ class ResturantController extends Controller
 
         $user = User::where('email', $req->input('email'))->get();
         //return $user[0]->password;
-        if(Crypt::decrypt($user[0]->password)==$req->input('password')){
+        //return $user;
+        if(count($user)==0)
+        {
+            $req->Session()->flash('status','User Can not found!');
+            return redirect('/login');              
+        }
+        else if(Crypt::decrypt($user[0]->password)==$req->input('password')){
             $req->Session()->put('user', $user[0]->name);
                 return redirect('/');
         }
