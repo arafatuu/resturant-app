@@ -11,6 +11,25 @@
      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+var check = function() {
+ // console.log('heyy');
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+
+var checkempty = ()=>{
+    if (document.getElementById('uname').value =='')
+    document.getElementById('msg').innerHTML = 'Name cant be empty';
+}
+    </script>
+    
 </head>
 <body class="container">
     <header>
@@ -23,5 +42,6 @@
     <footer>
         Copy rights &copy by Resturant App
     </footer>
+
 </body>
 </html>
